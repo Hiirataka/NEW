@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  background-color: #2F2F2F;
+  display: flex;
+  gap: 6%;
+  justify-content: center;
+  padding-inline: 8%;
+  padding-block: 6%;
+}
+
+.col-1 {
+  max-width: 295px;
+  min-width: 238px;
+}
+
+hr {
+  width: 50%; height: 3px; background-color: gray; border: none; margin-block: 2%;
+}
+
+.col-1 img {
+  max-height: 32px;
+  margin-right: 4px;
+}
+
+.col-1 h1, p {
+  color: white;
+}
+
+.col-2 {
+  max-width: 600px;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #6B6B6B;
+  color: white;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border-radius: 13px;
+  padding-block: 12px;
+
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.scrolling-wrapper p {
+  padding-inline: 20px;
+  border-left: 1px solid white;
+}
+
+.card {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+
+@media screen and (max-width: 786px) {
+  .scrolling-wrapper {
+    justify-content: left;
+    padding-inline: 10px;
+    width: 100%;
+  }
+}
+
+.edu {
+  background-color: black;
+  color: white;
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+  padding-inline: 10%;
+  padding-block: 5%;
+}
+
+.exp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  margin-inline: auto;
+  padding-block: 5%;
+}
+
+.box-srtf {
+  max-width: 180px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.col-box {
+  display: flex; 
+  justify-content: center; 
+  gap: 7%; 
+  margin-top: 35px;
+}
+
+/* galery */
+.galery {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0px;
+}
+
+.row img {
+  height: 300px;
+}
+
+.porto {
+  padding-block: 5%;
+  text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col-1 {
+    text-align: center;
+  }
+
+  .col-1 hr {
+    margin: auto;
+    margin-block: 2%;
+  }
+
+  .col-2 {
+    margin-top: 45px;
+  }
+
+  .edu {
+    flex-wrap: wrap;
+  }
+
+  .edu h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .skill, .exp {
+    padding-inline: 25px;
+  }
+
+  .box-srtf {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .col-box {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .skill {
+    flex-wrap: wrap;
+  }
+
+  .skill p {
+    border: 1px solid black;
+    margin: 4px;
+    padding-block: 3px;
+  }
+
+  .skill .rght, .skill .left {
+    border: 1px solid black;
+  }
+}
